@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Channels</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Select Channel</h2>
+<div id="channels" class="container"></div>
+
+<script src="data.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const group = params.get("group");
+const subjectName = params.get("subject");
+
+const subject = data[group].find(s=>s.name===subjectName);
+
+const container = document.getElementById("channels");
+
+subject.channels.forEach(channel=>{
+let btn = document.createElement("button");
+btn.innerText = channel.name;
+btn.onclick = ()=>{
+window.open("links.html?group="+encodeURIComponent(group)+"&subject="+encodeURIComponent(subjectName)+"&channel="+encodeURIComponent(channel.name),"_blank");
+};
+container.appendChild(btn);
+});
+</script>
+
+</body>
+</html>
