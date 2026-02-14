@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.Com Semester 6 Learning Portal</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+}
+header{
+    background:#0d47a1;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+h1{margin:0;}
+.section{
+    margin:20px;
+}
+.stream{
+    background:#1565c0;
+    color:white;
+    padding:12px;
+    cursor:pointer;
+    margin-top:10px;
+    border-radius:5px;
+}
+.subjects{
+    display:none;
+    background:white;
+    padding:15px;
+    border-radius:5px;
+}
+.subject{
+    margin:10px 0;
+}
+a{
+    display:block;
+    margin-left:15px;
+    color:#0d47a1;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+footer{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:10px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>B.Com Semester 6 – Learning Portal</h1>
+<p>Unit Wise & Full Subject Playlists</p>
+</header>
+
+<div class="section">
+
+<!-- ================= GENERAL ================= -->
+
+<div class="stream" onclick="toggle('general')">
+B.Com General
+</div>
+
+<div id="general" class="subjects">
+
+<div class="subject"><b>English</b>
+<a href="https://youtube.com/playlist?list=PLUJXB7al70IB4mDWQIPyriRRylnwjPU2D" target="_blank">Part A – English by Nisa</a>
+<a href="https://youtube.com/playlist?list=PLUJXB7al70IBdkE4oiI4d40mycUq4JnQ8" target="_blank">Part B – English by Nisa</a>
+<a href="https://youtube.com/playlist?list=PLjNdhMBtsxpwAyVG7o59hqSCUYKKHvz-Y" target="_blank">Sara’s Learning Point</a>
+</div>
+
+<div class="subject"><b>Cost Control & Management Accounting</b>
+<a href="https://youtube.com/playlist?list=PLWJDzVuPkXAllmGP19jfhneNUdgOy1g2v" target="_blank">Part 1 – Hasham Ali Khan</a>
+<a href="https://youtube.com/playlist?list=PLWJDzVuPkXAlg4vnE3ZhB7UVp9JWl6Mog" target="_blank">Part 2 – Hasham Ali Khan</a>
+</div>
+
+<div class="subject"><b>GST</b>
+<a href="https://youtube.com/playlist?list=PLWJDzVuPkXAkNpdAIqufc2JxDoxjENrsj" target="_blank">Whole Subject – Hasham Ali Khan</a>
+</div>
+
+<div class="subject"><b>Accounting Standards</b>
+<a href="https://youtube.com/playlist?list=PLLhSIFfDZcUXO81uWFy_F6O4ZX0JfTYkV" target="_blank">Devika’s Commerce</a>
+</div>
+
+<div class="subject"><b>Research Methodology</b>
+<a href="https://youtube.com/playlist?list=PLLhSIFfDZcUWRlgiXMkd1rNeLSz1You4O" target="_blank">Devika’s Commerce</a>
+</div>
+
+</div>
+
+<!-- ================= HONORS ================= -->
+
+<div class="stream" onclick="toggle('honors')">
+B.Com Honors
+</div>
+
+<div id="honors" class="subjects">
+
+<div class="subject"><b>International Finance</b>
+<a href="https://youtube.com/playlist?list=PLWJDzVuPkXAnNpRjN6InK65R7ndvpYZUf" target="_blank">Hasham Ali Khan</a>
+</div>
+
+</div>
+
+<!-- ================= COMPUTER ================= -->
+
+<div class="stream" onclick="toggle('computer')">
+B.Com Computer Applications
+</div>
+
+<div id="computer" class="subjects">
+
+<div class="subject"><b>Cybersecurity</b>
+<a href="https://youtube.com/playlist?list=PLtfg0YD2YYUQMZp4bRkeZI0JXWHGqh8vo" target="_blank">Full Playlist</a>
+</div>
+
+</div>
+
+<!-- ================= BUSINESS ANALYTICS ================= -->
+
+<div class="stream" onclick="toggle('analytics')">
+B.Com Business Analytics
+</div>
+
+<div id="analytics" class="subjects">
+
+<div class="subject"><b>Same subjects as General Stream</b></div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 B.Com Semester 6 Learning Portal
+</footer>
+
+<script>
+function toggle(id){
+    var x = document.getElementById(id);
+    if(x.style.display === "block"){
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
