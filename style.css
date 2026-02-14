@@ -1,0 +1,70 @@
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background:#eef2f7;
+}
+
+header{
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+color:white;
+padding:20px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+header p{
+margin:5px 0 0;
+font-size:14px;
+font-weight:normal;
+}
+
+.container{
+padding:15px;
+max-width:600px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+select, input{
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+.playlist-list{
+margin-top:15px;
+}
+
+.playlist-item{
+padding:12px;
+background:#f1f5f9;
+border-radius:10px;
+margin-bottom:8px;
+cursor:pointer;
+font-weight:500;
+transition:0.2s;
+}
+
+.playlist-item:hover{
+background:#dbeafe;
+transform:scale(1.02);
+}
+
+footer{
+text-align:center;
+padding:15px;
+font-size:12px;
+color:#555;
+margin-top:20px;
+}
