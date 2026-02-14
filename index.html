@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edustreamix - B.Com Semester 6</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  🎓 Edustreamix  
+  <p>B.Com Semester 6 Learning Portal</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+
+    <input type="text" id="searchBox" placeholder="🔍 Search Playlist..." onkeyup="searchPlaylists()">
+
+    <select id="courseSelect" onchange="loadSubjects()">
+      <option value="">Select Course</option>
+      <option value="general">B.Com General</option>
+      <option value="honors">B.Com Honors</option>
+      <option value="computer">B.Com Computer Applications</option>
+      <option value="analytics">B.Com Business Analytics</option>
+    </select>
+
+    <select id="subjectSelect" onchange="loadPlaylists()">
+      <option value="">Select Subject</option>
+    </select>
+
+    <div id="playlistContainer" class="playlist-list"></div>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Edustreamix | Designed for Students
+</footer>
+
+<script src="data.js"></script>
+</body>
+</html>
