@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>B.Com Semester 6</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎓 B.Com Semester 6</h1>
+<h2>Select Group</h2>
+
+<div id="groups" class="container"></div>
+
+<script src="data.js"></script>
+<script>
+const container = document.getElementById("groups");
+
+for(let group in data){
+let btn = document.createElement("button");
+btn.innerText = group;
+btn.onclick = ()=> {
+window.open("subjects.html?group="+encodeURIComponent(group),"_blank");
+};
+container.appendChild(btn);
+}
+</script>
+
+</body>
+</html>
