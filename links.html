@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>YouTube Links</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>YouTube Playlists</h2>
+<div id="links" class="container"></div>
+
+<script src="data.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const group = params.get("group");
+const subjectName = params.get("subject");
+const channelName = params.get("channel");
+
+const subject = data[group].find(s=>s.name===subjectName);
+const channel = subject.channels.find(c=>c.name===channelName);
+
+const container = document.getElementById("links");
+
+channel.links.forEach(link=>{
+let btn = document.createElement("button");
+btn.innerText = "▶ Open Playlist";
+btn.onclick = ()=>{
+window.open(link,"_blank");
+};
+container.appendChild(btn);
+});
+</script>
+
+</body>
+</html>
