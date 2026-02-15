@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EDUSTREAMIX | B.Com Semester 6</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>EDUSTREAMIX</h1>
+<p>B.Com Semester 6 Learning Portal</p>
+</header>
+
+<div class="main-container">
+
+<div id="groups" class="section active"></div>
+<div id="subjects" class="section"></div>
+<div id="sections" class="section"></div>
+<div id="links" class="section"></div>
+
+</div>
+
+<footer>
+<p>© 2026 EDUSTREAMIX | Smart Learning Platform</p>
+</footer>
+
+<script src="data.js"></script>
+
+<script>
+
+const groupsDiv = document.getElementById("groups");
+const subjectsDiv = document.getElementById("subjects");
+const sectionsDiv = document.getElementById("sections");
+const linksDiv = document.getElementById("links");
+
+function resetSections(){
+    subjectsDiv.innerHTML="";
+    sectionsDiv.innerHTML="";
+    linksDiv.innerHTML="";
+    subjectsDiv.classList.remove("active");
+    sectionsDiv.classList.remove("active");
+    linksDiv.classList.remove("active");
+}
+
+function createCard(text, clickFn){
+    let card = document.createElement("div");
+    card.className="card";
+    card.innerText=text;
+    card.onclick=clickFn;
+    return card;
+}
+
+function showSubjects(group){
+    resetSections();
+    subjectsDiv.innerHTML="";
+    data[group].forEach(sub=>{
+        subjectsDiv.appendChild(
+            createCard(sub.name, ()=>showSections(sub))
+        );
+    });
+    subjectsDiv.classList.add("active");
+    subjectsDiv.scrollIntoView({behavior:"smooth"});
+}
+
+function showSections(subject){
+    sectionsDiv.innerHTML="";
+    linksDiv.innerHTML="";
+    subject.channels.forEach(sec=>{
+        sectionsDiv.appendChild(
+            createCard(sec.name, ()=>showLinks(sec))
+        );
+    });
+    sectionsDiv.classList.add("active");
+    sectionsDiv.scrollIntoView({behavior:"smooth"});
+}
+
+function showLinks(section){
+    linksDiv.innerHTML="";
+    section.links.forEach(link=>{
+        let a=document.createElement("a");
+        a.href=link;
+        a.target="_blank";
+        a.className="link-card";
+        a.innerText="▶ Open YouTube Playlist";
+        linksDiv.appendChild(a);
+    });
+    linksDiv.classList.add("active");
+    linksDiv.scrollIntoView({behavior:"smooth"});
+}
+
+window.onload=function(){
+    for(let group in data){
+        groupsDiv.appendChild(
+            createCard(group, ()=>showSubjects(group))
+        );
+    }
+};
+
+</script>
+
+</body>
+</html>
